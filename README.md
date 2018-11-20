@@ -132,9 +132,9 @@ graph TD
 <section style="color:blue;font-size: 16px;margin-bottom: 0px;">1、init</section>
  
 name|type|描述
-:- | :- | :- | :- | :- 
-canvas||
-ctx||
+| :- | :- | :- | 
+canvas|canvas|canvas元素
+ctx|ctx|canvas上下文
 config|DOM[] |配置
 gain|number| canvas放大倍数
 mounted|func| 编译之后，canvas绘制完成调用
