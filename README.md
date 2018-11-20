@@ -2,7 +2,7 @@
 
 
 特点 | css | canvas
-|---- | ---- | ---- | ---- | 
+| ---- | ---- | ---- | 
 成本| 简单，少量api就可以做复杂动画| 大量代码做简单动画
 性能|可以自动做到优雅降级|需要做代码兼容
 灵活性|较差|非常灵活
@@ -132,9 +132,9 @@ graph TD
 <section style="color:blue;font-size: 16px;margin-bottom: 0px;">1、init</section>
  
 name|type|描述
-:- | :- | :- | :- | :- 
-canvas||
-ctx||
+| :- | :- | :- | 
+canvas|canvas|canvas元素
+ctx|ctx|canvas上下文
 config|DOM[] |配置
 gain|number| canvas放大倍数
 mounted|func| 编译之后，canvas绘制完成调用
@@ -143,7 +143,7 @@ created|func| 在创建之初，编译之前
 <section style="color:blue;font-size: 16px;margin-bottom: 0px;">2、public</section>
 
 name|type|描述
-:- | :- | :- | :- | :- 
+| :- | :- | :- |
 startTime | number| touchstart触发时间
 endTime |number| touchend触发时间
 startClientX |number| touchstart触发x坐标
@@ -163,7 +163,7 @@ getClassList|get func: {className: string[]}| 获取class
 包括返回所有DOM数据以外，额外返回
 
 name|type|描述
-:- | :- | :- | :- | :- 
+| :- | :- | :- |
 e.self | object| 得到此元素本身
 e.parent | object| 得到此元素父级
 e.index | number| 属于第几层级元素
@@ -171,38 +171,40 @@ e.index | number| 属于第几层级元素
 <section style="color:blue;font-size: 16px;margin-bottom: 0px;">3、布局</section>
 
 name|type|描述|是否可继承
-:- | :- | :- | :- | :- 
-click|func| 点击事件
-touchmove|func| touchmove事件
-touchstart|func| touchstart事件
-touchend|func| touchend事件
-children|DOM[]|子集 
+| :- | :- | :- | :- | 
+click|func| 点击事件| 否
+touchmove|func| touchmove事件| 否
+touchstart|func| touchstart事件| 否
+touchend|func| touchend事件| 否
+children|DOM[]|子集 | 否
 w|number|宽 |是
-h|number|高 
-x|number|x坐标 （在子元素中使用会被视为绝对定位，以屏幕左上角开始计算）
-y|number|y坐标 （在子元素中使用会被视为绝对定位，以屏幕左上角开始计算）
+h|number|高 | 否
+x|number|x坐标 （在子元素中使用会被视为绝对定位，以屏幕左上角开始计算）| 否
+y|number|y坐标 （在子元素中使用会被视为绝对定位，以屏幕左上角开始计算）| 否
 fontSize|number|字体大小| 是
 color|string|字体颜色 |是
 opcity|number|透明度 |是
-zIndex|number|层级
-whiteSpace|string opt['nowrap'] | 父级宽度可被撑开，整行展示
-class|string|className
-backgroundImage|HTMLCanvasElement & string|背景图片
-maxLine|number|文字最大展示行数
-scale|{x:number,y:number}|缩放
-rotate|number & string|旋转(单位deg) 
-particle|{size:number,d:number}|粒子 size（粒子大小）d（粒子间距）
-border|string|边框（如1rpx solid red 或者 1rpx dashed:10:3 red）10为线宽3为间距，可不写默认10：3
-lineHeight|number|行高
-text|string|文字（有这个就会绘制文字）
-textAlign|string| start默认 center居中 end
-backgroundColor|string|背景颜色
-backgroundSize|{w:number,h:number}|背景尺寸
-backgroundPosition|{x: number,y:number}| 背景位置，从元素左上角计算
-paddingLeft|number|内边距
-paddingTop|number|内边距
-marginLeft|number|外边距 （只从父级左上角计算，与兄弟元素无关）
-marginTop|number|外边距 （只从父级左上角计算，与兄弟元素无关）
-canLRSlide|boolean|可以左右滑动 默认不可以
+zIndex|number|层级| 否
+whiteSpace|string opt['nowrap'] | 父级宽度可被撑开，整行展示| 否
+class|string|className| 否
+backgroundImage|HTMLCanvasElement & string|背景图片| 否
+maxLine|number|文字最大展示行数| 否
+scale|{x:number,y:number}|缩放| 否
+rotate|number & string|旋转(单位deg) | 否
+particle|{size:number,d:number}|粒子 size（粒子大小）d（粒子间距）| 否
+border|string|边框（如1rpx solid red 或者 1rpx dashed:10:3 red）10为线宽3为间距，可不写默认10：3| 否
+lineHeight|number|行高| 否
+text|string|文字（有这个就会绘制文字）| 否
+textAlign|string| start默认 center居中 end| 否
+backgroundColor|string|背景颜色| 否
+backgroundSize|{w:number,h:number}|背景尺寸| 否
+backgroundPosition|{x: number,y:number}| 背景位置，从元素左上角计算| 否
+paddingLeft|number|内边距| 否
+paddingTop|number|内边距| 否
+marginLeft|number|外边距 （只从父级左上角计算，与兄弟元素无关）| 否
+marginTop|number|外边距 （只从父级左上角计算，与兄弟元素无关）| 否
+canLRSlide|boolean|可以左右滑动 默认不可以| 否
+overText|string|超出展示的文字 如：展开 | 否
+overTextColor|string| 超出展示的文字的颜色| 否
 
 
