@@ -1,0 +1,11 @@
+{
+  "name": "canvasrun",
+  "version": "1.0.0",
+  "description": "像css一样写canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luoxue",
+  "license": "ISC"
+}
