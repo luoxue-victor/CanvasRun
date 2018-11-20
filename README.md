@@ -204,5 +204,7 @@ paddingTop|number|内边距| 否
 marginLeft|number|外边距 （只从父级左上角计算，与兄弟元素无关）| 否
 marginTop|number|外边距 （只从父级左上角计算，与兄弟元素无关）| 否
 canLRSlide|boolean|可以左右滑动 默认不可以| 否
+overText|string|超出展示的文字 如：展开 | 否
+overTextColor|string| 超出展示的文字的颜色| 否
 
 
