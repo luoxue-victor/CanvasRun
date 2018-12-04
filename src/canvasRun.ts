@@ -1,3 +1,6 @@
+/**
+ * 作者：落雪 
+ * */
 export default class CanvasRun {
   constructor(){
     console.log('注册成功')
