@@ -2,9 +2,8 @@ module.exports = function (api) {
   return {
     'presets': [
       [
-        'minify',
-        {
-          removeConsole: false,
+        'minify', {
+          builtIns: false
         }
       ],
       [

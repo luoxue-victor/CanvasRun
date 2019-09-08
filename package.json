@@ -4,8 +4,8 @@
   "description": "像css一样写canvas",
   "main": "index.js",
   "scripts": {
-    "build": "babel src/ -d lib/",
-    "dev": "npm run build -- --extensions '.ts' -w"
+    "build": "babel src/ -d lib/ --extensions '.ts'",
+    "dev": "npm run build -- -w"
   },
   "author": "luoxue",
   "license": "ISC",
