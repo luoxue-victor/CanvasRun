@@ -1,14 +1,13 @@
 {
-    "compilerOptions": {
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "lib": ["dom","es2015","es5"],
-      "module": "es2015",
-      "moduleResolution": "node",
-      "target": "es5"
-    },
-    "include": [
-      "./src/**/*"
-    ]
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["dom","es2015","es5"],
+    "module": "esNext",
+    "moduleResolution": "node",
+    "target": "es5"
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }
-  
