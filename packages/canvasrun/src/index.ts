@@ -226,10 +226,10 @@ export default class CanvasRun {
 
       let {x,y,w,h,particle} = VCANVASDOM;
       const grainSize = particle.size || 5;
-      const diameter =  particle.d || 0;
-      const getRandom = () => {
-        return 0.5 * diameter * (Math.random() > 0.5 ? Math.random() : -Math.random()); 
-      };
+      // const diameter =  particle.d || 0;
+      // const getRandom = () => {
+      //   return 0.5 * diameter * (Math.random() > 0.5 ? Math.random() : -Math.random()); 
+      // };
       const storeArr = [];
       const store = () => {
         for(let i = x;i <= x + w; i += grainSize) {
@@ -248,16 +248,16 @@ export default class CanvasRun {
       };
 
       store();
-      const put = () => {
-        let arr = this.particleStore[VCANVASDOM.class];
-        for(let i = 0; i < arr.length; i++) {
-          arr[i] && arr[i].file && this.ctx.putImageData(
-            arr[i].file,
-            arr[i].x + getRandom(),
-            arr[i].y + getRandom(),
-          );
-        }
-      };
+      // const put = () => {
+      //   let arr = this.particleStore[VCANVASDOM.class];
+      //   for(let i = 0; i < arr.length; i++) {
+      //     arr[i] && arr[i].file && this.ctx.putImageData(
+      //       arr[i].file,
+      //       arr[i].x + getRandom(),
+      //       arr[i].y + getRandom(),
+      //     );
+      //   }
+      // };
 
       const arr = [];
       this.ctx.save()

@@ -1,13 +1,27 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "lib": ["dom","es2015","es5"],
-    "module": "esNext",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "sourceMap": false,
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "target": "es5"
+    "allowJs": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": false,
+    "removeComments": false,
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"],
+    "rootDir": ".",
+    "paths": {
+      "compile": ["packages/compile/src"]
+    }
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["packages/global.d.ts", "packages/*/src"]
 }
